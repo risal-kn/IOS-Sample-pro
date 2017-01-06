@@ -10,6 +10,9 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *btn_google;
+
+- (IBAction)onClick:(id)sender;
 
 @end
 
