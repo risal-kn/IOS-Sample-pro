@@ -79,12 +79,15 @@
 
     
 }
+
 -(void) GotoCollectionPage
 {
     UIStoryboard *storybord=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
     CollectionPageViewController *cs=[storybord instantiateViewControllerWithIdentifier:@"CollectionView"];
     [self.navigationController pushViewController:cs animated:YES];
 }
+
+
 
 -(void) storybordNavigation
 {
