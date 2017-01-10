@@ -27,7 +27,6 @@
     
 }
 
-
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
 }
@@ -54,6 +53,19 @@
     TabedViewController *cs=[storybord instantiateViewControllerWithIdentifier:@"TabedView"];
     [self.navigationController pushViewController:cs animated:YES];
 }
+
+- (IBAction)GotoSegmentControl:(UIButton *)sender {
+    [self GotoSegmentAction];
+}
+
+
+-(void)GotoSegmentAction
+{
+    UIStoryboard *storybord=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    TabedViewController *cs=[storybord instantiateViewControllerWithIdentifier:@"SegmentView"];
+    [self.navigationController pushViewController:cs animated:YES];
+}
+
 
 // show alers
 -(void)alertDisplay

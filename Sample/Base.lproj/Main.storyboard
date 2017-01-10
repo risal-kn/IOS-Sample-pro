@@ -102,6 +102,27 @@
                                     <action selector="TabedView_action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yl8-UM-m25"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVH-0b-e3i">
+                                <frame key="frameInset" minX="57" minY="383" width="261" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Segment control"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="0.99821728470000004" green="0.16796699170000001" blue="5.6108423449999998e-05" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="GotoSegmentControl:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xRn-TQ-bNy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.53546065759999995" green="0.82633525969999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -118,7 +139,7 @@
         <scene sceneID="EOH-bZ-eHu">
             <objects>
                 <navigationController id="B1J-8h-Wws" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2xd-0k-vGw">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="2xd-0k-vGw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -417,6 +438,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AkK-wM-Bub" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1949" y="555"/>
+        </scene>
+        <!--Segment View Controller-->
+        <scene sceneID="5G1-pi-BLg">
+            <objects>
+                <viewController storyboardIdentifier="SegmentView" id="H7V-Nn-2No" customClass="SegmentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xH5-tp-gPU"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qqy-tV-djV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Jh-W4-ZjH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jR3-iJ-6yA">
+                                <frame key="frameInset" minX="16" minY="255" width="343" height="392"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oFN-lx-tsx">
+                                <frame key="frameInset" minX="16" minY="255" width="343" height="392"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jfO-Az-Efu">
+                                <frame key="frameInset" minX="16" minY="255" width="343" height="392"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Fov-M9-5Gv">
+                                <frame key="frameInset" minX="16" minY="149" width="343" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.1456028412" blue="0.15547004649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Third"/>
+                                </segments>
+                                <color key="tintColor" red="0.53546065759999995" green="0.82633525969999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="change_index:" destination="H7V-Nn-2No" eventType="valueChanged" id="rPd-3w-nra"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="View1" destination="jfO-Az-Efu" id="dSa-ay-xY7"/>
+                        <outlet property="View2" destination="oFN-lx-tsx" id="gBR-fx-P1h"/>
+                        <outlet property="View3" destination="jR3-iJ-6yA" id="9OM-yd-ETg"/>
+                        <outlet property="segmentCotrol" destination="Fov-M9-5Gv" id="MO4-xz-jcy"/>
+                        <outlet property="view2" destination="oFN-lx-tsx" id="ntI-Eu-FvQ"/>
+                        <outlet property="view3" destination="jR3-iJ-6yA" id="9W6-Oi-l0z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vvx-50-24A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2416.5" y="348.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="kIf-TL-ndl">

@@ -31,7 +31,9 @@
 		E8B28B2D1E1A256C0068F389 /* CountryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B28B2C1E1A256C0068F389 /* CountryCell.m */; };
 		E8B28B2F1E1A27D00068F389 /* CountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8B28B2E1E1A27D00068F389 /* CountryCell.xib */; };
 		E8B28B331E1A373D0068F389 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B28B321E1A373D0068F389 /* Country.m */; };
+		E8D014CE1E23B8D4004AB468 /* DrawerviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D014CD1E23B8D4004AB468 /* DrawerviewViewController.m */; };
 		E8E791371E1CC5A4002A65C9 /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8E791361E1CC5A4002A65C9 /* Second.storyboard */; };
+		E8EBD9C91E236247006EAFEA /* SegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EBD9C81E236247006EAFEA /* SegmentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = E81487831E150A0600010123;
 			remoteInfo = Sample;
+		};
+		E8D014C91E23B5AF004AB468 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8D014C51E23B5AF004AB468 /* KYDrawerController.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8F1128DE1C3FCC9E0058E404;
+			remoteInfo = KYDrawerController;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -93,7 +102,12 @@
 		E8B28B2E1E1A27D00068F389 /* CountryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountryCell.xib; sourceTree = "<group>"; };
 		E8B28B311E1A373D0068F389 /* Country.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Country.h; sourceTree = "<group>"; };
 		E8B28B321E1A373D0068F389 /* Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Country.m; sourceTree = "<group>"; };
+		E8D014C51E23B5AF004AB468 /* KYDrawerController.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KYDrawerController.xcodeproj; path = "../../../Downloads/KYDrawerController-ObjC-master/KYDrawerController.xcodeproj"; sourceTree = "<group>"; };
+		E8D014CC1E23B8D4004AB468 /* DrawerviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerviewViewController.h; sourceTree = "<group>"; };
+		E8D014CD1E23B8D4004AB468 /* DrawerviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawerviewViewController.m; sourceTree = "<group>"; };
 		E8E791361E1CC5A4002A65C9 /* Second.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
+		E8EBD9C71E236247006EAFEA /* SegmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentViewController.h; sourceTree = "<group>"; };
+		E8EBD9C81E236247006EAFEA /* SegmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +142,7 @@
 				E81487A01E150A0800010123 /* SampleTests */,
 				E81487AB1E150A0900010123 /* SampleUITests */,
 				E81487851E150A0800010123 /* Products */,
+				E8D014B81E23B4CC004AB468 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +159,8 @@
 		E81487861E150A0800010123 /* Sample */ = {
 			isa = PBXGroup;
 			children = (
+				E8D014CB1E23B876004AB468 /* Drawer */,
+				E8EBD9C61E2361C8006EAFEA /* SegmentPage */,
 				E881B0441E1E49F60052DB18 /* Tabedpages */,
 				E8E791351E1CC576002A65C9 /* CollectionPage */,
 				E8B28B271E1A1DA10068F389 /* country */,
@@ -244,6 +261,31 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		E8D014B81E23B4CC004AB468 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E8D014C51E23B5AF004AB468 /* KYDrawerController.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E8D014C61E23B5AF004AB468 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E8D014CA1E23B5AF004AB468 /* KYDrawerController.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E8D014CB1E23B876004AB468 /* Drawer */ = {
+			isa = PBXGroup;
+			children = (
+				E8D014CC1E23B8D4004AB468 /* DrawerviewViewController.h */,
+				E8D014CD1E23B8D4004AB468 /* DrawerviewViewController.m */,
+			);
+			name = Drawer;
+			sourceTree = "<group>";
+		};
 		E8E791351E1CC576002A65C9 /* CollectionPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +297,15 @@
 				E853A1811E1D269200D150DB /* SingleCell.xib */,
 			);
 			name = CollectionPage;
+			sourceTree = "<group>";
+		};
+		E8EBD9C61E2361C8006EAFEA /* SegmentPage */ = {
+			isa = PBXGroup;
+			children = (
+				E8EBD9C71E236247006EAFEA /* SegmentViewController.h */,
+				E8EBD9C81E236247006EAFEA /* SegmentViewController.m */,
+			);
+			name = SegmentPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +405,12 @@
 			mainGroup = E814877B1E150A0600010123;
 			productRefGroup = E81487851E150A0800010123 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E8D014C61E23B5AF004AB468 /* Products */;
+					ProjectRef = E8D014C51E23B5AF004AB468 /* KYDrawerController.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E81487831E150A0600010123 /* Sample */,
@@ -362,6 +419,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E8D014CA1E23B5AF004AB468 /* KYDrawerController.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KYDrawerController.framework;
+			remoteRef = E8D014C91E23B5AF004AB468 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E81487821E150A0600010123 /* Resources */ = {
@@ -407,6 +474,8 @@
 				E840A9E41E1523DF0014838F /* SecondViewController.m in Sources */,
 				E87D687F1E1588DD00F2B0D5 /* CalculatorViewController.m in Sources */,
 				E8B28B2A1E1A1DF90068F389 /* countryViewController.m in Sources */,
+				E8D014CE1E23B8D4004AB468 /* DrawerviewViewController.m in Sources */,
+				E8EBD9C91E236247006EAFEA /* SegmentViewController.m in Sources */,
 				E8B28B2D1E1A256C0068F389 /* CountryCell.m in Sources */,
 				E853A17E1E1CDBC700D150DB /* CollectionPageViewController.m in Sources */,
 				E814878F1E150A0800010123 /* ViewController.m in Sources */,
