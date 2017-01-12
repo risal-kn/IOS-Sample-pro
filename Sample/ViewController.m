@@ -103,7 +103,7 @@
     UILocalNotification *notification = [[UILocalNotification alloc] init];
     if (notification)
     {
-       NSDate *fireTime = [[NSDate date] addTimeInterval:10]; // adds 10 secs
+        NSDate *fireTime = [[NSDate date] addTimeInterval:5]; // adds 10 secs
         notification.fireDate = fireTime;
         notification.alertBody = @"Alert!";
         
