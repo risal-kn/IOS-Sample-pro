@@ -9,11 +9,15 @@
 #import "countryViewController.h"
 #import "CountryCell.h"
 #import "Country.h"
+#define SCREEN_WIDTH    ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT   ([UIScreen mainScreen].bounds.size.height)
+
 @interface countryViewController () <UITableViewDataSource, UITableViewDelegate>
 {
     NSArray *arr;
     NSMutableArray *countrylist,*tempcountrylist;
 }
+
 @property (weak, nonatomic) IBOutlet UITableView *tbl_country;
 @property (weak, nonatomic) IBOutlet UISearchBar *txt_search;
 
@@ -52,14 +56,26 @@
             //break;
         }
     }
-    }else{
+    }
+    else
+    {
         [countrylist addObjectsFromArray:tempcountrylist];
     }
     
     [_tbl_country reloadData];
 }
+
+
 -(void)fetchData
 {
+    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    [spinner setColor:[UIColor redColor]];
+    CGRect frame = spinner.frame;
+    frame.origin.x = (SCREEN_WIDTH/ 2 - frame.size.width / 2);
+    frame.origin.y = (SCREEN_HEIGHT / 2 - frame.size.height / 2);
+    spinner.frame = frame;
+    [self.view addSubview:spinner];
+    [spinner startAnimating];
     NSURL *url = [NSURL URLWithString:@"https://restcountries.eu/rest/v1/all"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [NSURLConnection sendAsynchronousRequest:request
@@ -89,6 +105,7 @@
                  [countrylist addObject:country];
                 
              }
+             //[spinner stopAnimating];
             [tempcountrylist addObjectsFromArray:countrylist];
              [_tbl_country reloadData];
         }
@@ -139,7 +156,7 @@
 {
     
     Country *cntry=[countrylist objectAtIndex:indexPath.row];
-
+  
     UIAlertController * alert = [UIAlertController
                                  alertControllerWithTitle:cntry.name
                                  message:cntry.region
@@ -150,6 +167,8 @@
                                 style:UIAlertActionStyleDefault
                                 handler:^(UIAlertAction * action) {
                                     //Handle your yes please button action here
+                                   [self.navigationController popToRootViewControllerAnimated:YES];
+                                   [self.deligate didSelectCountry:self name:cntry.name];
                                 }];
     
     UIAlertAction* noButton = [UIAlertAction

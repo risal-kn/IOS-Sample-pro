@@ -12,7 +12,6 @@
 		E81487891E150A0800010123 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E81487881E150A0800010123 /* main.m */; };
 		E814878C1E150A0800010123 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E814878B1E150A0800010123 /* AppDelegate.m */; };
 		E814878F1E150A0800010123 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E814878E1E150A0800010123 /* ViewController.m */; };
-		E81487921E150A0800010123 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E81487901E150A0800010123 /* Main.storyboard */; };
 		E81487941E150A0800010123 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E81487931E150A0800010123 /* Assets.xcassets */; };
 		E81487971E150A0800010123 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E81487951E150A0800010123 /* LaunchScreen.storyboard */; };
 		E81487A21E150A0800010123 /* SampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E81487A11E150A0800010123 /* SampleTests.m */; };
@@ -25,8 +24,10 @@
 		E853A17E1E1CDBC700D150DB /* CollectionPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E853A17D1E1CDBC700D150DB /* CollectionPageViewController.m */; };
 		E853A1821E1D269200D150DB /* SingleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E853A1801E1D269200D150DB /* SingleCell.m */; };
 		E853A1831E1D269200D150DB /* SingleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E853A1811E1D269200D150DB /* SingleCell.xib */; };
+		E85A5FC01E26370700C8B64D /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E85A5FBF1E26370700C8B64D /* CoreTelephony.framework */; };
 		E87D687F1E1588DD00F2B0D5 /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E87D687E1E1588DD00F2B0D5 /* CalculatorViewController.m */; };
 		E881B0471E1E4A2C0052DB18 /* TabedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E881B0461E1E4A2C0052DB18 /* TabedViewController.m */; };
+		E8AD90381E274CCC00C52214 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8AD90361E274CCC00C52214 /* Main.storyboard */; };
 		E8B28B2A1E1A1DF90068F389 /* countryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B28B291E1A1DF90068F389 /* countryViewController.m */; };
 		E8B28B2D1E1A256C0068F389 /* CountryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B28B2C1E1A256C0068F389 /* CountryCell.m */; };
 		E8B28B2F1E1A27D00068F389 /* CountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8B28B2E1E1A27D00068F389 /* CountryCell.xib */; };
@@ -51,13 +52,6 @@
 			remoteGlobalIDString = E81487831E150A0600010123;
 			remoteInfo = Sample;
 		};
-		E8D014C91E23B5AF004AB468 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E8D014C51E23B5AF004AB468 /* KYDrawerController.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8F1128DE1C3FCC9E0058E404;
-			remoteInfo = KYDrawerController;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -69,7 +63,6 @@
 		E814878B1E150A0800010123 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E814878D1E150A0800010123 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		E814878E1E150A0800010123 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E81487911E150A0800010123 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E81487931E150A0800010123 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E81487961E150A0800010123 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E81487981E150A0800010123 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,10 +84,12 @@
 		E853A17F1E1D269200D150DB /* SingleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleCell.h; sourceTree = "<group>"; };
 		E853A1801E1D269200D150DB /* SingleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleCell.m; sourceTree = "<group>"; };
 		E853A1811E1D269200D150DB /* SingleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingleCell.xib; sourceTree = "<group>"; };
+		E85A5FBF1E26370700C8B64D /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		E87D687D1E1588DD00F2B0D5 /* CalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
 		E87D687E1E1588DD00F2B0D5 /* CalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewController.m; sourceTree = "<group>"; };
 		E881B0451E1E4A2C0052DB18 /* TabedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabedViewController.h; sourceTree = "<group>"; };
 		E881B0461E1E4A2C0052DB18 /* TabedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabedViewController.m; sourceTree = "<group>"; };
+		E8AD90371E274CCC00C52214 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E8B28B281E1A1DF90068F389 /* countryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = countryViewController.h; sourceTree = "<group>"; };
 		E8B28B291E1A1DF90068F389 /* countryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = countryViewController.m; sourceTree = "<group>"; };
 		E8B28B2B1E1A256C0068F389 /* CountryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryCell.h; sourceTree = "<group>"; };
@@ -102,7 +97,6 @@
 		E8B28B2E1E1A27D00068F389 /* CountryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountryCell.xib; sourceTree = "<group>"; };
 		E8B28B311E1A373D0068F389 /* Country.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Country.h; sourceTree = "<group>"; };
 		E8B28B321E1A373D0068F389 /* Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Country.m; sourceTree = "<group>"; };
-		E8D014C51E23B5AF004AB468 /* KYDrawerController.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KYDrawerController.xcodeproj; path = "../../../Downloads/KYDrawerController-ObjC-master/KYDrawerController.xcodeproj"; sourceTree = "<group>"; };
 		E8D014CC1E23B8D4004AB468 /* DrawerviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerviewViewController.h; sourceTree = "<group>"; };
 		E8D014CD1E23B8D4004AB468 /* DrawerviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawerviewViewController.m; sourceTree = "<group>"; };
 		E8E791361E1CC5A4002A65C9 /* Second.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
@@ -115,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E85A5FC01E26370700C8B64D /* CoreTelephony.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,7 +164,7 @@
 				E814878B1E150A0800010123 /* AppDelegate.m */,
 				E814878D1E150A0800010123 /* ViewController.h */,
 				E814878E1E150A0800010123 /* ViewController.m */,
-				E81487901E150A0800010123 /* Main.storyboard */,
+				E8AD90361E274CCC00C52214 /* Main.storyboard */,
 				E81487931E150A0800010123 /* Assets.xcassets */,
 				E81487951E150A0800010123 /* LaunchScreen.storyboard */,
 				E81487981E150A0800010123 /* Info.plist */,
@@ -264,17 +259,9 @@
 		E8D014B81E23B4CC004AB468 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E8D014C51E23B5AF004AB468 /* KYDrawerController.xcodeproj */,
+				E85A5FBF1E26370700C8B64D /* CoreTelephony.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E8D014C61E23B5AF004AB468 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E8D014CA1E23B5AF004AB468 /* KYDrawerController.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		E8D014CB1E23B876004AB468 /* Drawer */ = {
@@ -405,12 +392,6 @@
 			mainGroup = E814877B1E150A0600010123;
 			productRefGroup = E81487851E150A0800010123 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = E8D014C61E23B5AF004AB468 /* Products */;
-					ProjectRef = E8D014C51E23B5AF004AB468 /* KYDrawerController.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				E81487831E150A0600010123 /* Sample */,
@@ -419,16 +400,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		E8D014CA1E23B5AF004AB468 /* KYDrawerController.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = KYDrawerController.framework;
-			remoteRef = E8D014C91E23B5AF004AB468 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E81487821E150A0600010123 /* Resources */ = {
@@ -440,11 +411,11 @@
 				E82DD9331E1B6B16006401CB /* uk.png in Resources */,
 				E82DD9311E1B6B16006401CB /* image1.jpg in Resources */,
 				E81487971E150A0800010123 /* LaunchScreen.storyboard in Resources */,
+				E8AD90381E274CCC00C52214 /* Main.storyboard in Resources */,
 				E8E791371E1CC5A4002A65C9 /* Second.storyboard in Resources */,
 				E80306E31E1F6DAE00206C4B /* fb.png in Resources */,
 				E81487941E150A0800010123 /* Assets.xcassets in Resources */,
 				E853A1831E1D269200D150DB /* SingleCell.xib in Resources */,
-				E81487921E150A0800010123 /* Main.storyboard in Resources */,
 				E82DD9321E1B6B16006401CB /* india.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -519,20 +490,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E81487901E150A0800010123 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E81487911E150A0800010123 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E81487951E150A0800010123 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				E81487961E150A0800010123 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E8AD90361E274CCC00C52214 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E8AD90371E274CCC00C52214 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

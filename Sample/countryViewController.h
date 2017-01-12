@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class countryViewController;
+@protocol countryDeligate <NSObject>
+
+-(void)didSelectCountry:(countryViewController *)controler name:(NSString *)name;
+
+@end
+
 @interface countryViewController : UIViewController
+
+@property (weak,nonatomic) id<countryDeligate>deligate;
 
 @end
