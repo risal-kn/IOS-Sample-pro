@@ -18,6 +18,7 @@
     NSMutableArray *countrylist,*tempcountrylist;
 }
 
+@property (weak, nonatomic) IBOutlet MKMapView *map;
 @property (weak, nonatomic) IBOutlet UITableView *tbl_country;
 @property (weak, nonatomic) IBOutlet UISearchBar *txt_search;
 @property (weak, nonatomic) IBOutlet UITextField *tf_search;
@@ -26,34 +27,23 @@
 
 @implementation countryViewController
 
-- (IBAction)enterText:(id)sender {
-
-
-}
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.titleView = _txt_search;
-    UIImage *image = [UIImage imageNamed: @"uk.png"];
-    UIImageView *iView = [[UIImageView alloc] initWithImage:image];
     
     
-    
-    UITextField *searchField = [self.txt_search valueForKey:@"searchField"];
-    
-    // To change background color
-    searchField.backgroundColor = [UIColor blueColor];
-    
-    // To change text color
-    searchField.textColor = [UIColor redColor];
-    
-    // To change placeholder text color
-    searchField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Some Text"];
-    UILabel *placeholderLabel = [searchField valueForKey:@"placeholderLabel"];
-    placeholderLabel.textColor = [UIColor grayColor];
-    
-    
+    UITextField *searchField;
+    NSUInteger numViews = [_txt_search.subviews count];
+    for (int i = 0; i < numViews; i++) {
+        if ([[_txt_search.subviews objectAtIndex:i] isKindOfClass:[UITextField class]]) { //conform?
+            searchField = [_txt_search.subviews objectAtIndex:i];
+        }
+    }
+    if (searchField) {
+        searchField.textColor = [UIColor redColor];
+        searchField.placeholder=@"Search";
+        [searchField setBackgroundColor:[UIColor whiteColor]]; //set your gray background image here
+        [searchField setBorderStyle:UITextBorderStyleNone];
+    }
     countrylist=[[NSMutableArray alloc] init];
     tempcountrylist=[[NSMutableArray alloc] init];
     [self fetchData];
@@ -68,6 +58,22 @@
 //        [countrylist addObject:country];
 //    
 //    }
+}
+
+
+
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
+{
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 800, 800);
+    [self.map setRegion:[self.map regionThatFits:region] animated:YES];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    CLLocationCoordinate2D zoomLocation;
+    zoomLocation.latitude = 39.281516;
+    zoomLocation.longitude= -76.580806;
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 0.5*1000, 0.5*1000);
+    [_map setRegion:viewRegion animated:YES];
 }
 
 -(void)searchBar:(UISearchBar *)searchBar textDidChange:(nonnull NSString *)searchText{
@@ -150,6 +156,10 @@
 {
     return [countrylist count];
 }
+- (IBAction)Back_action:(id)sender {
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -164,14 +174,18 @@
     //NSLog(@"%@.....",[countrylist objectAtIndex:indexPath.row]);
     Country *cntry=[countrylist objectAtIndex:indexPath.row];
     //cell.lbl_name.text=@"google";
+    cell.image_view.layer.cornerRadius=cell.image_view.frame.size.width/2;
+    cell.image_view.clipsToBounds = YES;
     cell.lbl_name.text=cntry.name;
     cell.lbl_capital.text=cntry.capital;
     cell.lbl_population.text=cntry.population;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.layer.borderWidth=1;
-    cell.layer.cornerRadius=10;
-    [cell setBackgroundColor:[UIColor whiteColor]];
-    cell.layer.borderColor=[UIColor grayColor].CGColor;
+    //cell.layer.borderWidth=1;
+    cell.view_single.layer.cornerRadius=10;
+    cell.view_single.backgroundColor=[UIColor whiteColor];
+    [cell setBackgroundColor:[UIColor lightGrayColor]];
+    //cell.layer.cornerRadius=10;
+    //cell.layer.borderColor=[UIColor grayColor].CGColor;
     // Configure the cell...
     return cell;
 }

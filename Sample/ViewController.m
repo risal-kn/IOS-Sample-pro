@@ -228,7 +228,7 @@
 }
 
 -(void)didSelectCountry:(countryViewController *)controler name:(NSString *)name{
-    [controler dismissViewControllerAnimated:YES completion:nil];
+    //[controler dismissViewControllerAnimated:YES completion:nil];
     [_lbl_name setText:name];
 }
 

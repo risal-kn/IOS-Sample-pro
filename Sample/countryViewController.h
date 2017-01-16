@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
 @class countryViewController;
 @protocol countryDeligate <NSObject>

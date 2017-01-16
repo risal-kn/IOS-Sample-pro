@@ -34,6 +34,7 @@
 		E8B28B2F1E1A27D00068F389 /* CountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8B28B2E1E1A27D00068F389 /* CountryCell.xib */; };
 		E8B28B331E1A373D0068F389 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B28B321E1A373D0068F389 /* Country.m */; };
 		E8D014CE1E23B8D4004AB468 /* DrawerviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D014CD1E23B8D4004AB468 /* DrawerviewViewController.m */; };
+		E8D3A7A71E2CDB4B008FDCAA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D3A7A61E2CDB4B008FDCAA /* MapKit.framework */; };
 		E8E791371E1CC5A4002A65C9 /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8E791361E1CC5A4002A65C9 /* Second.storyboard */; };
 		E8EBD9C91E236247006EAFEA /* SegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EBD9C81E236247006EAFEA /* SegmentViewController.m */; };
 /* End PBXBuildFile section */
@@ -92,7 +93,7 @@
 		E881B0461E1E4A2C0052DB18 /* TabedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabedViewController.m; sourceTree = "<group>"; };
 		E8A5A7751E28B33C0041251E /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		E8AD90371E274CCC00C52214 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E8B28B281E1A1DF90068F389 /* countryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = countryViewController.h; sourceTree = "<group>"; };
+		E8B28B281E1A1DF90068F389 /* countryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = countryViewController.h; sourceTree = "<group>"; usesTabs = 0; };
 		E8B28B291E1A1DF90068F389 /* countryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = countryViewController.m; sourceTree = "<group>"; };
 		E8B28B2B1E1A256C0068F389 /* CountryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryCell.h; sourceTree = "<group>"; };
 		E8B28B2C1E1A256C0068F389 /* CountryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryCell.m; sourceTree = "<group>"; };
@@ -101,6 +102,7 @@
 		E8B28B321E1A373D0068F389 /* Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Country.m; sourceTree = "<group>"; };
 		E8D014CC1E23B8D4004AB468 /* DrawerviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerviewViewController.h; sourceTree = "<group>"; };
 		E8D014CD1E23B8D4004AB468 /* DrawerviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawerviewViewController.m; sourceTree = "<group>"; };
+		E8D3A7A61E2CDB4B008FDCAA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E8E791361E1CC5A4002A65C9 /* Second.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
 		E8EBD9C71E236247006EAFEA /* SegmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentViewController.h; sourceTree = "<group>"; };
 		E8EBD9C81E236247006EAFEA /* SegmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentViewController.m; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8D3A7A71E2CDB4B008FDCAA /* MapKit.framework in Frameworks */,
 				E85A5FC01E26370700C8B64D /* CoreTelephony.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,6 +265,7 @@
 		E8D014B81E23B4CC004AB468 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E8D3A7A61E2CDB4B008FDCAA /* MapKit.framework */,
 				E85A5FBF1E26370700C8B64D /* CoreTelephony.framework */,
 			);
 			name = Frameworks;
