@@ -20,13 +20,40 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tbl_country;
 @property (weak, nonatomic) IBOutlet UISearchBar *txt_search;
+@property (weak, nonatomic) IBOutlet UITextField *tf_search;
 
 @end
 
 @implementation countryViewController
 
+- (IBAction)enterText:(id)sender {
+
+
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.titleView = _txt_search;
+    UIImage *image = [UIImage imageNamed: @"uk.png"];
+    UIImageView *iView = [[UIImageView alloc] initWithImage:image];
+    
+    
+    
+    UITextField *searchField = [self.txt_search valueForKey:@"searchField"];
+    
+    // To change background color
+    searchField.backgroundColor = [UIColor blueColor];
+    
+    // To change text color
+    searchField.textColor = [UIColor redColor];
+    
+    // To change placeholder text color
+    searchField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Some Text"];
+    UILabel *placeholderLabel = [searchField valueForKey:@"placeholderLabel"];
+    placeholderLabel.textColor = [UIColor grayColor];
+    
+    
     countrylist=[[NSMutableArray alloc] init];
     tempcountrylist=[[NSMutableArray alloc] init];
     [self fetchData];
@@ -105,7 +132,7 @@
                  [countrylist addObject:country];
                 
              }
-             //[spinner stopAnimating];
+             [spinner stopAnimating];
             [tempcountrylist addObjectsFromArray:countrylist];
              [_tbl_country reloadData];
         }
@@ -142,6 +169,8 @@
     cell.lbl_population.text=cntry.population;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.layer.borderWidth=1;
+    cell.layer.cornerRadius=10;
+    [cell setBackgroundColor:[UIColor whiteColor]];
     cell.layer.borderColor=[UIColor grayColor].CGColor;
     // Configure the cell...
     return cell;
@@ -149,7 +178,12 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 100;
+    return 150;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    //this is the space
+    return 10;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
