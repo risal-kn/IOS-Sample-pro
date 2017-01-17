@@ -11,6 +11,7 @@
 #import "countryViewController.h"
 #import "CollectionPageViewController.h"
 #import "TabedViewController.h"
+#import "CoreDataViewControl.h"
 #import <sys/utsname.h>
 
 @interface ViewController ()
@@ -59,6 +60,13 @@
     NSString *cputype=[self getCPUtypeDetails];
     NSLog(@"CPU output is : %@....", cputype);
     
+}
+
+- (IBAction)callCoreData:(UIButton *)sender {
+    UIStoryboard *storybord=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    CoreDataViewControl *cs=[storybord instantiateViewControllerWithIdentifier:@"coreDataViewControll"];
+    [self.navigationController pushViewController:cs animated:YES];
+ 
 }
 
 -(NSString *)getCPUtypeDetails

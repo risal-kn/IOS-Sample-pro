@@ -138,14 +138,12 @@
                  [countrylist addObject:country];
                 
              }
-             [spinner stopAnimating];
+             //[spinner stopAnimating];
             [tempcountrylist addObjectsFromArray:countrylist];
              [_tbl_country reloadData];
         }
         
      }];
-    
-    
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
